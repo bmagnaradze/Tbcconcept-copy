@@ -1,0 +1,15 @@
+{
+  "name": "tbcconcept-copy",
+  "version": "1.0.0",
+  "description": "Technical assignment",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server --host=localhost  --port=3000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.0"
+  }
+}
