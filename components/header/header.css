@@ -1,11 +1,13 @@
 .header {
-  z-index: 100;
+  z-index: 1000;
   height: 80px;
+  width: 100%;
+  box-sizing: border-box;
   background-color: #fff;
   border-bottom: 1px solid #eef1f1;
   padding-left: 47px;
   padding-right: 47px;
-  position: fixed;
+  position: sticky;
   top: 0;
   bottom: auto;
   left: 0;
@@ -22,6 +24,10 @@
   grid-column-gap: 32px;
   justify-content: flex-start;
   margin-right: auto;
+}
+
+.header_logo {
+  display: flex;
 }
 
 .d_cursor {
@@ -273,11 +279,10 @@
 
 @media screen and (max-width: 1120px) {
   .header_menu,
-  .header-logo,
   .lang_dropdown {
     display: none;
   }
-  .m_header-logo,
+
   .menu_icon {
     display: inline-block;
   }
@@ -287,6 +292,15 @@
   .header {
     padding-left: 45px;
     padding-right: 45px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header_logo {
+    display: none;
+  }
+  .m_header-logo {
+    display: inline-block;
   }
 }
 
