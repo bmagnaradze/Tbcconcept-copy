@@ -9,3 +9,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+#footer-placeholder {
+  display: flex;
+  margin-top: 40px;
+}
