@@ -262,3 +262,37 @@
 .lang_dropdown:hover .lang_dropdown-menu {
   display: block;
 }
+
+.m_header-logo,
+.menu_icon {
+  display: none;
+  img {
+    max-width: 37px;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .header_menu,
+  .header-logo,
+  .lang_dropdown {
+    display: none;
+  }
+  .m_header-logo,
+  .menu_icon {
+    display: inline-block;
+  }
+  .logo_section {
+    width: 36px;
+  }
+  .header {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .header {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
