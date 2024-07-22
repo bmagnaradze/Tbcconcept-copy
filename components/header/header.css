@@ -2,7 +2,6 @@
   z-index: 1000;
   height: 80px;
   width: 100%;
-  box-sizing: border-box;
   background-color: #fff;
   border-bottom: 1px solid #eef1f1;
   padding-left: 47px;
@@ -28,13 +27,6 @@
 
 .header_logo {
   display: flex;
-}
-
-.d_cursor {
-  cursor: pointer;
-}
-.d_inline {
-  display: inline-block;
 }
 
 .logo_section {
@@ -233,7 +225,6 @@
 .lang_dropdown-menu {
   position: absolute;
   width: 100%;
-  box-sizing: border-box;
   margin-top: 4px;
   top: 100%;
   left: 0;

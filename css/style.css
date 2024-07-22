@@ -9,7 +9,30 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+* {
+  box-sizing: border-box;
+}
+
 #footer-placeholder {
   display: flex;
   margin-top: 40px;
+}
+
+h2 {
+  margin: 0;
+  color: #141719;
+  margin-top: 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+p {
+  margin: 0px;
+}
+.d_cursor {
+  cursor: pointer;
+}
+.d_inline {
+  display: inline-block;
 }
