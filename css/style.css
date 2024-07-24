@@ -18,6 +18,13 @@ body {
   display: flex;
   margin-top: 40px;
 }
+#header-placeholder {
+  margin-bottom: 80px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 h2 {
   margin: 0;
@@ -35,4 +42,33 @@ p {
 }
 .d_inline {
   display: inline-block;
+}
+
+.p_global {
+  padding: 0 47px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1110px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.d_flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 991px) {
+  .p_global {
+    padding: 0 45px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .p_global {
+    padding: 0 15px;
+  }
 }

@@ -2,23 +2,17 @@
   /* height: calc(100vh - 80px); */
   width: 100%;
 }
-.breadcrumb {
-  padding: 24px 47px;
-}
+
 .breadcrumb_inner {
-  width: 100%;
-  max-width: 1110px;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 24px 0px;
 }
 
 .main_hero {
   position: relative;
   display: flex;
-  width: 100%;
-  max-width: 1100px;
   min-height: 360px;
-  margin: 32px auto 60px;
+  margin-top: 32px;
+  margin-bottom: 60px;
   background-color: #000;
   background-repeat: no-repeat;
   background-size: cover;
@@ -41,9 +35,7 @@
 .main_hero * {
   position: relative;
 }
-.main_wraper {
-  padding: 0 47px;
-}
+
 .banner_content {
   max-width: 450px;
   display: flex;
@@ -89,10 +81,6 @@
   color: #141719;
   font-weight: 500;
   line-height: 1.5;
-  width: 100%;
-  max-width: 1110px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .main_cards {
@@ -101,10 +89,6 @@
   grid-template-rows: auto auto;
   gap: 20px;
   padding-bottom: 60px;
-}
-.card_wraper {
-  max-width: 1100px;
-  margin: 0 auto;
 }
 
 .cards_heading {
@@ -213,11 +197,6 @@
 .main_cards::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-.numbers_container {
-  width: 100%;
-  max-width: 1110px;
-  margin: 0 auto;
-}
 
 .section_numbers {
   padding: 60px 0px;
@@ -232,12 +211,6 @@
   padding: 0px 47px;
 }
 
-.get_app-conatiner {
-  width: 100%;
-  max-width: 1110px;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
 .get_app_inner {
   min-height: 374px;
   justify-content: flex-start;
@@ -349,12 +322,6 @@
 }
 
 @media screen and (max-width: 1100px) {
-  .breadcrumb {
-    padding: 24px 45px;
-  }
-  .main_wraper {
-    padding: 0 45px;
-  }
   .message_txt {
     font-size: 32px;
   }
@@ -474,7 +441,6 @@
 }
 
 @media screen and (max-width: 479px) {
-  .breadcrumb,
   .section_numbers {
     padding: 15px;
   }
