@@ -25,24 +25,18 @@
 }
 
 .footer_main-col {
-  a {
-    text-decoration: none;
-  }
   a:hover {
     color: #182cc0;
   }
 }
+
 .footer_contact {
   a {
     text-decoration: none;
   }
   a:hover {
     text-decoration: underline;
-  }
-}
-.footer_dropdown-toggle {
-  a:hover {
-    text-decoration: none;
+    color: inherit;
   }
 }
 
@@ -50,6 +44,20 @@
   color: #141719;
   padding-bottom: 24px;
   font-weight: 700;
+  cursor: pointer;
+
+  &::after {
+    font-family: FontAwesome;
+    content: '\f107';
+    margin-left: 10px;
+    transition: transform 0.3s;
+    display: none;
+  }
+
+  &.active::after {
+    transform: rotate(180deg);
+    display: none;
+  }
 }
 
 .footer_dropdown-list {
@@ -57,6 +65,10 @@
   flex-direction: column;
   align-items: flex-start;
   display: flex;
+
+  &.show {
+    display: flex;
+  }
 }
 
 .footer_conect {
@@ -111,10 +123,73 @@
   align-items: center;
   display: flex;
 }
+.rules {
+  grid-column-gap: 35px;
+  grid-row-gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+  display: flex;
+}
 
 .bottom_logo {
   grid-column-gap: 8px;
   img {
     width: 21px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer_main-inner {
+    grid-row-gap: 0;
+    flex-direction: column;
+    display: flex;
+  }
+  .footer_main-col {
+    margin-left: -45px;
+    margin-right: -45px;
+  }
+  .footer_dropdown {
+    border-top: 1px solid #d1d5d6;
+  }
+  .footer_dropdown-toggle {
+    grid-column-gap: 36px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 36px 45px;
+    font-size: 24px;
+    line-height: 1.5;
+    display: flex;
+  }
+  .footer_dropdown-list {
+    grid-row-gap: 24px;
+    padding-bottom: 36px;
+    padding-left: 45px;
+    padding-right: 45px;
+    display: none;
+  }
+
+  .footer_dropdown-toggle {
+    &::after {
+      display: block;
+    }
+
+    &.active::after {
+      display: block;
+    }
+  }
+
+  .footer_bottom {
+    background-color: #f9fafa;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 14px;
+  }
+  .footer_bottom_inner {
+    grid-row-gap: 32px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .rules {
+    order: -1;
   }
 }

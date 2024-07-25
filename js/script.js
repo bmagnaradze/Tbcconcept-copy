@@ -7,7 +7,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   );
   loadComponent('components/main/main.html', 'main-placeholder');
-  loadComponent('components/footer/footer.html', 'footer-placeholder');
+  loadComponent(
+    'components/footer/footer.html',
+    'footer-placeholder',
+    function () {
+      initFooterDropdowns();
+    }
+  );
 });
 
 function loadComponent(url, placeholderId, callback) {
@@ -79,5 +85,17 @@ function initDropdowns() {
       unifiedDropdownContainer.style.display = 'none';
       unifiedDropdownContainer.dataset.activeDropdown = '';
     }
+  });
+}
+
+function initFooterDropdowns() {
+  const dropdownToggles = document.querySelectorAll('.footer_dropdown-toggle');
+
+  dropdownToggles.forEach((toggle) => {
+    toggle.addEventListener('click', function () {
+      const dropdownList = this.nextElementSibling;
+      dropdownList.classList.toggle('show');
+      this.classList.toggle('active');
+    });
   });
 }
