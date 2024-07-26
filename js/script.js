@@ -109,10 +109,22 @@ function initSwiper() {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-    pagination: {
-      el: '.swiper-pagination',
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      draggable: true,
     },
-    mousewheel: true,
-    keyboard: true,
+    on: {
+      slideChange: function () {
+        var activeIndex = this.activeIndex;
+        var slides = document.querySelectorAll('.swiper-slide');
+        slides.forEach(function (slide, index) {
+          if (index === activeIndex) {
+            slide.querySelector('.product-card').classList.add('active');
+          } else {
+            slide.querySelector('.product-card').classList.remove('active');
+          }
+        });
+      },
+    },
   });
 }
