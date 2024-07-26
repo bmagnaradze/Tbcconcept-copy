@@ -29,7 +29,7 @@ Node.js (which includes npm)
    git clone https://github.com/bmagnaradze/Tbcconcept-copy.git
 
 2. Navigate into the project directory:
-   Tbcconcept-copy
+   cd Tbcconcept-copy
 3. npm install
 
 Running the Project
