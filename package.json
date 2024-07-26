@@ -13,6 +13,7 @@
     "live-server": "^1.2.2"
   },
   "dependencies": {
-    "commit": "^0.0.4"
+    "commit": "^0.0.4",
+    "swiper": "^11.1.7"
   }
 }

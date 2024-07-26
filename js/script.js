@@ -1,21 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
-  loadComponent(
-    'components/header/header.html',
-    'header-placeholder',
-    function () {
-      initDropdowns();
-    }
-  );
-  loadComponent('components/main/main.html', 'main-placeholder');
-  loadComponent(
-    'components/footer/footer.html',
-    'footer-placeholder',
-    function () {
-      initFooterDropdowns();
-    }
-  );
-});
-
 function loadComponent(url, placeholderId, callback) {
   fetch(url)
     .then((response) => {
@@ -97,5 +79,40 @@ function initFooterDropdowns() {
       dropdownList.classList.toggle('show');
       this.classList.toggle('active');
     });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  loadComponent('components/main/main.html', 'main-placeholder', function () {
+    initSwiper();
+  });
+  loadComponent(
+    'components/header/header.html',
+    'header-placeholder',
+    function () {
+      initDropdowns();
+    }
+  );
+  loadComponent(
+    'components/footer/footer.html',
+    'footer-placeholder',
+    function () {
+      initFooterDropdowns();
+    }
+  );
+});
+
+function initSwiper() {
+  var swiper = new Swiper('.mySwiper', {
+    cssMode: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    mousewheel: true,
+    keyboard: true,
   });
 }
