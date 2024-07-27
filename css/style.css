@@ -1,8 +1,15 @@
 @import url('https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css');
 
+@font-face {
+  font-family: 'TBCfont';
+  src: url('../../fonts/TBCXRegular.dee156cc.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: TBCfont, sans-serif;
   line-height: 1.7;
   font-size: 16px;
   font-weight: 400;
