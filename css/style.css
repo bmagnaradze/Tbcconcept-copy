@@ -1,4 +1,4 @@
-@import '~swiper/swiper-bundle.min.css';
+@import url('https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css');
 
 body {
   margin: 0;

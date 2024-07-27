@@ -338,8 +338,11 @@
 
 .swiper-slide {
   width: 350px !important;
-  margin-right: 30px;
   height: auto !important;
+  margin-right: 30px;
+}
+.swiper-slide:last-child {
+  margin-right: 0;
 }
 
 .product-card {
@@ -434,7 +437,6 @@
   height: 2px !important;
   background-color: #d1d5d6 !important;
   top: auto !important;
-  bottom: 0 !important;
   left: 0 !important;
   right: 0 !important;
   width: 100% !important;
