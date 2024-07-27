@@ -55,10 +55,13 @@ function initDropdowns() {
       ) {
         unifiedDropdownContainer.style.display = 'none';
         unifiedDropdownContainer.dataset.activeDropdown = '';
+        this.classList.remove('active');
       } else {
         dropdownLinksContainer.innerHTML = dropdownContent[dropdownType];
         unifiedDropdownContainer.style.display = 'flex';
         unifiedDropdownContainer.dataset.activeDropdown = dropdownType;
+        toggles.forEach((t) => t.classList.remove('active'));
+        this.classList.add('active');
       }
     });
   });
@@ -70,9 +73,12 @@ function initDropdowns() {
     ) {
       unifiedDropdownContainer.style.display = 'none';
       unifiedDropdownContainer.dataset.activeDropdown = '';
+      toggles.forEach((toggle) => toggle.classList.remove('active'));
     }
   });
 }
+
+initDropdowns();
 
 function initFooterDropdowns() {
   const dropdownToggles = document.querySelectorAll('.footer_dropdown-toggle');

@@ -138,6 +138,10 @@
   transform: scaleX(0);
 }
 
+.header_dropdown-toggle.active .header_dropdown-line {
+  transform: scaleX(1);
+}
+
 .header_buttons {
   grid-column-gap: 16px;
   align-items: center;
